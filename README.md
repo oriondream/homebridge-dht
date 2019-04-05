@@ -1,6 +1,6 @@
 # homebridge-dht
 
-This is a fork of NorthernMan54 for the Dallas DS18B20 sensor. If you have a DTxx sensor, you can avoid the hassle by running: 
+This is a fork of NorthernMan54's repository with modifications for the Dallas DS18B20 sensor. If you have a DTxx sensor, you can avoid the hassle by running: 
 ```
 npm install homebridge-dht
 ```
