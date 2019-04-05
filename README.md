@@ -1,5 +1,10 @@
 # homebridge-dht
 
+This is a fork of NorthernMan54's repository with modifications for the Dallas DS18B20 sensor. If you have a DTxx sensor, you can avoid the hassle by running: 
+```
+npm install homebridge-dht
+```
+
 [![NPM Downloads](https://img.shields.io/npm/dm/homebridge-dht.svg?style=flat)](https://npmjs.org/package/homebridge-dht)
 
 Supports integration of a DHT11/DHT21/DHT22/DHT33/DHT44 Temperature/Humidity
@@ -10,6 +15,13 @@ This latest version splits the temperature and humidity into separate sensors, s
 they are readable from the home screen icon.  Historical display of temperature data is available via HomeKit apps thats support graphing.
 
 Also support use of multiple DHT22's, see config.json fragment.
+
+# Dependencies
+The following are node module dependencies 
+* debug
+* mcuiot-logger
+* moment
+* fakegato-history
 
 # Installation
 
