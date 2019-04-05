@@ -25,6 +25,8 @@ The following are node module dependencies
 
 # Installation
 
+Copy DS18B20 to /var/www/html
+
 For detailed installation instructions, please see the instructable at http://www.instructables.com/id/RPIHomeBridge-TemperatureHumidity-Sensor/
 
 # Configuration - with RPI cpu temperature sensor, requires cputemp program ( Optional )
@@ -54,7 +56,31 @@ For detailed installation instructions, please see the instructable at http://ww
 	]
 }
 ```
-# Configuration - without cputemp
+# Configuration for DS18B20 sensor - without cputemp
+```
+{
+    "bridge": {
+        "name": "Penny",
+        "username": "CC:22:3D:E3:CD:33",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+    "description": "HomeBridge DHT22",
+
+ "platforms": [],
+
+   "accessories": [
+	{ "accessory":        "Dht",
+          "name":             "dht22",
+    	  "name_temperature": "Temperature",
+          "name_humidity":    "Humdity",
+	  "dhtExec":          "/var/www/html/DS18B20",
+          "service":          "dht22" }
+	]
+}
+```
+# Configuration for DHTxx sensor - without cputemp
 ```
 {
     "bridge": {
@@ -89,7 +115,7 @@ For detailed installation instructions, please see the instructable at http://ww
   "name":        "dht22 - outdoor",
   "name_temperature": "Outdoor Temperature",
   "name_humidity": "Outdoor Humdity",
-  "gpio":        "2",   
+  "gpio":        "2",
   "service":     "dht22" }
 
 ```
